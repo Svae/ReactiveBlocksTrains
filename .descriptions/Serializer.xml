@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="Serializer" 
+    uuid="_FA9VU2hbEeWIyOC-XbhN3w" 
+    status="under construction" 
+    type="block" 
+    >
+    <required>
+        <block name="b0" uuid="_SrT4IVtUEeGtaPY7WHS-jQ"/>
+    </required>
+</block>

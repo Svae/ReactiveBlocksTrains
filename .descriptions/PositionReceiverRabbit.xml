@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="Position Receiver Rabbit" 
+    author="Linda Ariani Gunawan" 
+    provider="Bitreactive AS" 
+    uuid="_Uu5XE2w7EeWZPsIB7o3Hgw" 
+    status="under construction" 
+    type="system" 
+    >
+    <required>
+        <library path="lib/rabbitmq-java-client-bin-3.5.4/rabbitmq-client.jar"/>
+        <resource path="config/position.properties"/>
+        <block name="b2" uuid="_MCwgYWCVEeWbj6U52JsAAA"/>
+    </required>
+</block>

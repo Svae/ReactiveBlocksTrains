@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="no.ntnu.item.arctis.ARCTIS_RUNTIME_CONTAINER"/>
+	<classpathentry kind="con" path="no.ntnu.item.arctis.ARCTIS_DEPENDENCIES_CONTAINER"/>
+	<classpathentry kind="lib" path="/AMQPtest/rabbitmq-java-client-bin-3.5.4/commons-cli-1.1.jar"/>
+	<classpathentry kind="lib" path="/AMQPtest/rabbitmq-java-client-bin-3.5.4/commons-io-1.2.jar"/>
+	<classpathentry kind="lib" path="/AMQPtest/rabbitmq-java-client-bin-3.5.4/junit.jar"/>
+	<classpathentry kind="lib" path="/AMQPtest/rabbitmq-java-client-bin-3.5.4/rabbitmq-client-tests.jar"/>
+	<classpathentry kind="lib" path="/AMQPtest/rabbitmq-java-client-bin-3.5.4/rabbitmq-client.jar"/>
+	<classpathentry kind="lib" path="/Users/alexandersvae/Downloads/apache-qpid-jms-0.5.0/lib/proton-j-0.10.jar"/>
+	<classpathentry kind="lib" path="rabbitmq-java-client-bin-3.5.4/rabbitmq-client.jar"/>
+	<classpathentry kind="lib" path="lib/rabbitmq-java-client-bin-3.5.4/rabbitmq-client.jar"/>
+	<classpathentry kind="lib" path="/Users/alexandersvae/Downloads/gson-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/gson-2.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

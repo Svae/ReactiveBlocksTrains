@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="RabbitAMQP" 
+    uuid="_MCwgYWCVEeWbj6U52JsAAA" 
+    status="under construction" 
+    type="block" 
+    >
+    <required>
+        <block name="b0" uuid="_iRGK0WCVEeWbj6U52JsAAA"/>
+        <block name="b1" uuid="_2M0VEGa5EeWBMqcywpDmyw"/>
+    </required>
+</block>

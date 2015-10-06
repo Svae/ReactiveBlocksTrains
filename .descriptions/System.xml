@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="System" 
+    uuid="_jzyx0FuhEeWlG-TyBpvDhg" 
+    status="under construction" 
+    type="system" 
+    >
+    <required>
+        <library path="lib/rabbitmq-java-client-bin-3.5.4/rabbitmq-client.jar"/>
+        <resource path="lib/rabbitmq-java-client-bin-3.5.4/rabbitmq-client.jar"/>
+        <block name="b0" uuid="_MCwgYWCVEeWbj6U52JsAAA"/>
+    </required>
+</block>

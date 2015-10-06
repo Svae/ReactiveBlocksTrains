@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="Receiver" 
+    uuid="_2M0VEGa5EeWBMqcywpDmyw" 
+    status="under construction" 
+    type="block" 
+    >
+    <required>
+        <library path="lib/gson-2.4.jar"/>
+    </required>
+</block>

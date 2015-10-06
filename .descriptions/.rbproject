@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    title="networktest"
+    uuid="_hWGnYFuhEeWlG-TyBpvDhg"
+    version="1.0.0"
+    >
+    <dependencies>
+        <dependency name="com.bitreactive.examples.amqp" uuid="_6v92MOkwEeSNq-4fvozafQ" version="1.0.0"/>
+        <dependency name="com.bitreactive.library.amqp" uuid="_ZNMv8OjJEeSNq-4fvozafQ" version="1.1.0"/>
+        <dependency name="com.bitreactive.library.buffering" uuid="_oelmQPDwEeCxK4vi80n1Xg" version="3.11.2" indirect="true"/>
+        <dependency name="com.bitreactive.library.gson" uuid="_bCjFUFtTEeGtaPY7WHS-jQ" version="1.6.0"/>
+        <dependency name="com.bitreactive.library.kml" uuid="_yLO88MRLEeK-QZxzrSNhXA" version="1.2.0" indirect="true"/>
+        <dependency name="com.bitreactive.library.timers" uuid="_b0djMBzFEeGAXOPaKszhRg" version="1.6.1" indirect="true"/>
+    </dependencies>
+</project>

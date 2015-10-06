@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="Send" 
+    uuid="_iRGK0WCVEeWbj6U52JsAAA" 
+    status="under construction" 
+    type="block" 
+    >
+    <required>
+        <block name="b0" uuid="_SrT4IVtUEeGtaPY7WHS-jQ"/>
+    </required>
+</block>
