@@ -35,13 +35,15 @@ public class Receiver extends Block {
 		if(factory == null){
 			exchange_name = properties.containsKey("EXCHANGE_NAME") ? properties.get("EXCHANGE_NAME") : defaultExchange;
 			factory = new ConnectionFactory();
-			factory.setHost(properties.containsKey("HOST") ? properties.get("HOST") : "192.168.0.100");
+			configureFactory(factory, properties);
 			try {
 				connection = factory.newConnection();
 				channel = connection.createChannel();
+				//TODO: Add support for different queue types
 				channel.exchangeDeclare(exchange_name, "topic");
 				queue_name = channel.queueDeclare().getQueue();
 			} catch (IOException | TimeoutException e1) {
+				logger.error(e1.getMessage());
 				sendToBlock("FAILED", e1);
 			} 
 		}
@@ -54,6 +56,7 @@ public class Receiver extends Block {
 		        Object value = decodeBody(body);
 		        if(value == null){ 
 		        	sendToBlock("ERROR", "Failed to deserialize message body");
+		        	logger.error("Failed to deserialize message body");
 		        	return;
 		        }
 		        message.setBody(value);
@@ -63,6 +66,7 @@ public class Receiver extends Block {
 		try {
 			channel.basicConsume(queue_name, true, consumer);
 		} catch (IOException e) {
+			logger.error(e.getMessage());
 			sendToBlock("FAILED", e);
 		}
 		sendToBlock("READY", new Tuple<String, Connection>(exchange_name, connection));
@@ -83,6 +87,7 @@ public class Receiver extends Block {
 		try {
 			channel.queueBind(queue_name, exchange_name, topic);
 		} catch (IOException e) {
+			logger.error(e.getMessage());
 			sendToBlock("ERROR", e);
 		}
 	}
@@ -95,6 +100,7 @@ public class Receiver extends Block {
 		try {
 			channel.queueUnbind(queue_name, exchange_name, topic);
 		} catch (IOException e) {
+			logger.error(e.getMessage());
 			sendToBlock("ERROR", e);
 		}
 	}
@@ -108,10 +114,25 @@ public class Receiver extends Block {
 			channel.close();
 			connection.close();
 		} catch (IOException | TimeoutException e) {
+			logger.error(e.getMessage());
 			sendToBlock("ERROR", e);
 		}
 	}
 
+	private void configureFactory(ConnectionFactory factory, HashMap<String, String> properties){
+		factory.setHost(properties.containsKey("HOST") ? properties.get("HOST") : "192.168.0.100");
+		if(properties.containsKey("PORT")){
+			try{
+				int port = Integer.parseInt(properties.get("PORT"));
+				factory.setPort(port);
+			} catch (NumberFormatException e){
+				logger.error("Port property is not a integer, PORT = "  + properties.get("PORT"));
+			}
+		}
+		if(properties.containsKey("USERNAME")) factory.setUsername(properties.get("USERNAME"));
+		if(properties.containsKey("PASSWORD")) factory.setPassword(properties.get("PASSWORD"));
+	}
+	
 	// Do not edit this constructor.
 	public Receiver() {
 	}

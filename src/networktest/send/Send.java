@@ -24,9 +24,9 @@ public class Send extends Block {
 			public void run() {
 				try {
 					channel.basicPublish(exchange,topic, null, m.getBytes());
-					System.out.println(m);
 					sendToBlock("SENT");
 				} catch (IOException e) {
+					logger.error(e.getMessage());
 					sendToBlock("ERROR", e);
 				}
 				
@@ -44,6 +44,7 @@ public class Send extends Block {
 				channel = connection.createChannel();
 				channel.exchangeDeclare(exchange, "topic");
 			} catch (IOException e) {
+				logger.error(e.getMessage());
 				sendToBlock("ERROR", e);
 			}
 		}
@@ -53,8 +54,8 @@ public class Send extends Block {
 		try {
 			channel.close();
 			connection.close();
-
 		} catch (IOException | TimeoutException e) {
+			logger.error(e.getMessage());
 			sendToBlock("ERROR", e);
 		} 
 	}
