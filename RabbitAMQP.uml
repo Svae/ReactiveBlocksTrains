@@ -16,13 +16,11 @@
           <transition xmi:id="_WH2X4G0IEeWxkeMiUFqQqA" name="removeTopics / " source="_IrVUQGa5EeWBMqcywpDmyw" target="_IrVUQGa5EeWBMqcywpDmyw"/>
           <transition xmi:id="_YVTG4G0IEeWxkeMiUFqQqA" name="addTopics / " source="_IrVUQGa5EeWBMqcywpDmyw" target="_IrVUQGa5EeWBMqcywpDmyw"/>
           <transition xmi:id="_i2hbMG0OEeWxkeMiUFqQqA" name=" / failed" source="_yM9XwGd-EeWtCOL3-2Ib_A" target="_i2ipUW0OEeWxkeMiUFqQqA"/>
-          <transition xmi:id="_nhLzgG0OEeWxkeMiUFqQqA" name=" / failed" source="_IrVUQGa5EeWBMqcywpDmyw" target="_nhNBoW0OEeWxkeMiUFqQqA"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_MEzHwGCVEeWbj6U52JsAAA" name="&lt;initial>"/>
           <subvertex xmi:type="uml:State" xmi:id="_IrVUQGa5EeWBMqcywpDmyw" name="active"/>
           <subvertex xmi:type="uml:FinalState" xmi:id="_efoHAGa5EeWBMqcywpDmyw" name="&lt;final>"/>
           <subvertex xmi:type="uml:State" xmi:id="_yM9XwGd-EeWtCOL3-2Ib_A" name="initializing"/>
           <subvertex xmi:type="uml:FinalState" xmi:id="_i2ipUW0OEeWxkeMiUFqQqA" name="&lt;final>"/>
-          <subvertex xmi:type="uml:FinalState" xmi:id="_nhNBoW0OEeWxkeMiUFqQqA" name="&lt;final>"/>
         </region>
       </ownedBehavior>
       <ownedOperation xmi:id="_Zu29IGatEeWBMqcywpDmyw" name="generateMsg"/>
@@ -302,5 +300,4 @@
   <graphics:Shape xmi:id="_Z8PAwG0OEeWxkeMiUFqQqA" x="720" y="738" base_Element="_Z6hJgG0OEeWxkeMiUFqQqA"/>
   <graphics:Shape xmi:id="_czHuUG0OEeWxkeMiUFqQqA" aux1="0 57 -234 -248  234 57 0 -248 " base_Element="_cMaToG0OEeWxkeMiUFqQqA"/>
   <arctis:event xmi:id="_i2ipUG0OEeWxkeMiUFqQqA" base_Transition="_i2hbMG0OEeWxkeMiUFqQqA" effects="_Z6hJgG0OEeWxkeMiUFqQqA"/>
-  <arctis:event xmi:id="_nhNBoG0OEeWxkeMiUFqQqA" base_Transition="_nhLzgG0OEeWxkeMiUFqQqA" effects="_Z6hJgG0OEeWxkeMiUFqQqA"/>
 </xmi:XMI>

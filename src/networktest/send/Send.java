@@ -27,7 +27,7 @@ public class Send extends Block {
 					sendToBlock("SENT");
 				} catch (IOException e) {
 					logger.error(e.getMessage());
-					sendToBlock("ERROR", e);
+					sendToBlock("ERROR", e.getMessage());
 				}
 				
 			}

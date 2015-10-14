@@ -192,8 +192,8 @@
       </when>
     </packagedElement>
     <packagedElement xmi:type="uml:TimeEvent" xmi:id="_tgvxsHJ-EeWwSc-b3mUj5g" name="t2">
-      <when xmi:id="_Zf-VkHJ_EeWwSc-b3mUj5g" name="t2">
-        <expr xmi:type="uml:LiteralString" xmi:id="_Zf-8oHJ_EeWwSc-b3mUj5g" name="t2" value="1000"/>
+      <when xmi:id="_UNJxEHJ_EeWwSc-b3mUj5g" name="t2">
+        <expr xmi:type="uml:LiteralString" xmi:id="_UNJxEXJ_EeWwSc-b3mUj5g" name="t2" value="500"/>
       </when>
     </packagedElement>
     <packagedElement xmi:type="uml:TimeEvent" xmi:id="_AIP4UHJ_EeWwSc-b3mUj5g" name="t3">

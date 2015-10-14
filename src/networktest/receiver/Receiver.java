@@ -67,7 +67,7 @@ public class Receiver extends Block {
 			channel.basicConsume(queue_name, true, consumer);
 		} catch (IOException e) {
 			logger.error(e.getMessage());
-			sendToBlock("FAILED", e);
+			sendToBlock("FAILED", e.getMessage());
 		}
 		sendToBlock("READY", new Tuple<String, Connection>(exchange_name, connection));
 
@@ -78,7 +78,7 @@ public class Receiver extends Block {
 		try {
 			return gson.fromJson(new String(body, "UTF-8"), Object.class);
 		} catch (JsonSyntaxException | UnsupportedEncodingException e) {
-			e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 		return null; 
 	}
@@ -88,7 +88,7 @@ public class Receiver extends Block {
 			channel.queueBind(queue_name, exchange_name, topic);
 		} catch (IOException e) {
 			logger.error(e.getMessage());
-			sendToBlock("ERROR", e);
+			sendToBlock("ERROR", e.getMessage());
 		}
 	}
 
@@ -101,7 +101,7 @@ public class Receiver extends Block {
 			channel.queueUnbind(queue_name, exchange_name, topic);
 		} catch (IOException e) {
 			logger.error(e.getMessage());
-			sendToBlock("ERROR", e);
+			sendToBlock("ERROR", e.getMessage());
 		}
 	}
 
@@ -126,7 +126,7 @@ public class Receiver extends Block {
 				int port = Integer.parseInt(properties.get("PORT"));
 				factory.setPort(port);
 			} catch (NumberFormatException e){
-				logger.error("Port property is not a integer, PORT = "  + properties.get("PORT"));
+				logger.error("Port property is not an integer, PORT = "  + properties.get("PORT"));
 			}
 		}
 		if(properties.containsKey("USERNAME")) factory.setUsername(properties.get("USERNAME"));

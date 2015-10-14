@@ -13,19 +13,13 @@ public class Component extends Block {
 	public HashMap<String,String> init(){
 		HashMap<String, String> p = new HashMap<>();
 		p.put("HOST", "192.168.0.100");
-		p.put("EXCHANGE_NAME", "train_logs");
+		p.put("EXCHANGE_NAME", "train_communication");
 		return p;
 	}
 
 
-	public Message createMsg() {
-		System.out.println("Ready, creating message");
-		String[] s = new String[3];
-		s[0] = "Hei";
-		s[1] = "paa";
-		s[2] = "deg!";
-
-		return new Message("train", s);
+	public Message createMsg() {		
+		return new Message("train", "test");
 	}
 	
 	public void print(String s){
@@ -33,12 +27,10 @@ public class Component extends Block {
 	}
 	
 	public void printMsg(Message m){
-		/*String[] s = (String[])m.getBody();
-		for (int i = 0; i < 3; i++) {
-			System.out.println(s[i]);
-		}*/
 		System.out.println(m.getBody().getClass().toString());
-		ArrayList<String> l = (ArrayList<String>)m.getBody();
+		System.out.println(m.getBody().toString());
+		System.out.println(m.getEnvelope().getClass());
+		System.out.println("Time:" + m.getProperties().getTimestamp());
 		
 	}
 	
@@ -48,7 +40,7 @@ public class Component extends Block {
 
 
 	public String topic() {
-		return "*";
+		return "train";
 	}
 
 }
